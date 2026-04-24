@@ -1,0 +1,128 @@
+/* ===== GLOBAL ===== */
+body {
+  background-color: #0d1117; /* page */
+  color: #c9d1d9;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontal center */
+  padding-top: 20px;
+}
+
+/* ===== TITLE ===== */
+h1 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* ===== INPUT CONTROLS ===== */
+.controls {
+  margin-bottom: 20px;
+}
+
+input, select {
+  background: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  padding: 6px 8px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+input::placeholder {
+  color: #8b949e;
+}
+
+button {
+  background: #238636;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2ea043;
+}
+
+/* ===== BOARD (TABULAR GRID) ===== */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ===== COLUMNS ===== */
+.column {
+  background: #161b22;   /* make it clearly different from page */
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 350px;
+
+  /* IMPORTANT: makes columns visually stand out */
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+/* Column titles */
+.column h2 {
+  text-align: center;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  color: #f0f6fc;
+}
+
+/* ===== TASK CARDS ===== */
+.task {
+  background: #21262d; /* lighter than column */
+  border: 1px solid #30363d;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+  color: #c9d1d9;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.task:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #da3633;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ===== PRIORITY COLORS ===== */
+.high {
+  border-left: 4px solid #f85149;
+}
+
+.medium {
+  border-left: 4px solid #d29922;
+}
+
+.low {
+  border-left: 4px solid #238636;
+}
